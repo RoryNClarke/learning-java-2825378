@@ -1,26 +1,37 @@
+package src;
+
+import java.util.*; 
 
 public class Main {
 
     public static void main(String args[]) {
-        String question = "";
-        String choiceOne = "";
-        String choiceTwo = "";
-        String choiceThree = "";
+        String question = "Who is the best football player of all time?";
+        String choiceOne = "Ronaldo";
+        String choiceTwo = "Messi";
+        String choiceThree = "Pele";
 
         String correctAnswer = choiceTwo;
+        Scanner sc = new Scanner(System.in);
+        boolean rightAnswer = false; 
+        while(rightAnswer == false){
+            System.out.println(question);
+            System.out.println("Please select one of the three following Answers");
+            System.out.println(choiceOne + ", " + choiceTwo + ", " + choiceThree);
+            String userAnswer = sc.next();
 
-        // Write a print statement asking the question
-        // Write a print statement giving the answer choices
+            if(userAnswer.equals(choiceTwo)){
+                System.out.println("Congratualions, you have common sense");
+                rightAnswer = true; 
+            }
+            else if(userAnswer.equals(choiceThree) || userAnswer.equals(choiceOne)) { 
+                System.out.println("Incorrect, the right answer was: " + choiceTwo);
+            }
+            else{
+                System.out.println("Please select a valid answer");
+            }
+        }
 
-        // Have the user input an answer
-        // Retrieve the user's input
-
-        // If the user's input matches the correctAnswer...
-        // then the user is correct and we want to print out a congrats message to the user.
-
-        // If the user's input does not match the correctAnswer...
-        // then the user is incorrect and we want to print out a message saying that the user is incorrect as well as what the correct choice was.
-
+        
     }
 
 }
