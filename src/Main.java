@@ -1,11 +1,13 @@
+package src; 
 public class Main {
 
     public static void main(String[] args) {
-        StudentProfile profileOne = new StudentProfile("Sally", "Salmon", "Film", 3.75, 2022);
-        StudentProfile profileTwo = new StudentProfile("Max", "Tiffen", "Computer Science", 3.45, 2021);
-
-        profileTwo.incrementExpectedGraduationYear();
-        System.out.println(profileTwo.expectedYearToGraduate);
+        StudentProfiles profileOne = new StudentProfiles("Rory","Clarke", 3.65, "Computer", 2021);
+        
+        
+        profileOne.incrementGraduationYear();
+        System.out.println(profileOne.expectedGraduationYear);
+    }
     }
 
-}
+
